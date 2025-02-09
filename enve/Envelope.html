@@ -31,6 +31,14 @@
         
         $("#fullscreen-button").hide();
       });
+
+      function playMusic() {
+      let audio = document.getElementById("bg-music");
+      if (audio.paused) {
+      audio.play();
+    }
+  }
+
     </script>
     <title>Gift Card</title>
   </head>
@@ -66,7 +74,7 @@
     <button id="fullscreen-button" style="display: none">
       Pencet Inih
     </button>
-    <audio autoplay>
+    <audio id ="bg-music" autoplay loop muted >
       <source src="/enve/Glue Song.mp3" type="audio/mp3"/>
     </audio>
   </body>
