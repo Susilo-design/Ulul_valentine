@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fullscreen Message</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lily+Script+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #fae1dd;
+        margin: 0;
+      }
+
+      .fullscreen-message {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+      #message { 
+        font-family: "Caveat", serif;
+      }
+
+      .fullscreen-message .text {
+        padding: 1rem 2rem;
+        font-size: 2.8rem;
+        max-width: 90%;
+        max-height: 90%;
+        overflow-y: auto;
+        font-family: "Brush Script MT", cursive;
+        text-align: center;
+        line-height: 1.5;
+        background-color: #eae2b7;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      }
+
+      @media (max-width: 768px) {
+        .fullscreen-message .text {
+          font-size: 2rem;
+          padding: 1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .fullscreen-message .text {
+          font-size: 1.5rem;
+          padding: 0.5rem;
+        }
+      }
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <audio autoplay loop>
+      <source src="/enve/Glue Song.mp3" type="audio/mp3" />
+    </audio>
+    <div class="fullscreen-message">
+      <div class="text fullscreen">
+        <h4>Dibaca Ya kak</h4>
+        <p id="message">
+          Halo Kak Ulfah, semua ini bukan untuk hal aneh-aneh kok. Mungkin kamu sudah sadar kalau aku mendekati atau gimana, aku bikin ini cuma ingin ngasih hadiah aja.
+          <br>
+          Aku mau jujur kalau aku tuh suka sama kamu, tapi aku nggak ada niat ngajak pacaran atau hubungan apa pun itu. Aku cuma ingin temenan aja seperti biasanya, mungkin ini agak spesial aja. Aku juga nggak mau pacaran atau lebih dari teman, yang aku pengen kita tetap temenan kayak biasa aja.
+          <br>
+          Maaf kalau kadang bercandaku berlebihan kayak PPN 70%, aku niatnya bercanda aja kok. Kalau kamu risih atau merasa terganggu, atau ada perasaan apa pun itu, bilang aja ya. Itu bisa jadi masukan buat aku juga.
+          <br>
+          Dulu awal-awal aku nanya soal fotografi, sebenarnya aku sudah tahu, cuma biar ada topik aja. Mungkin kamu sudah sadar juga, maaf ya, hehehe. Makasih ya, Kak, sudah ada di masa awal SMK aku. Aku senang banget bisa kenal sama kamu.
+          <br>
+          Aku juga senang banget bisa bantu jualan atau apa pun itu. Makasih ya, Kak, sudah mau ngobrol sama aku, walaupun kadang aku ngeselin atau gimana gitu. Maaf ya, hehehe. Kalau ada kesalahan atau aku jahat sama Kakak, ngomong aja ya. Aku nggak pengen kamu marah, setidaknya aku tahu dari kamu langsung.
+          <br>
+          Makasih ya, aku senang banget bisa kenal sama kamu. Aku tuh, entah kenapa, takut sama perempuan yang baru aku kenal. Entah siapa pun itu, rasa takutnya pun nggak jelas karena apa. Jadi, maaf ya kalau aku salah ngomong atau gimana. Aku benar-benar minta maaf. Aku benar-benar nggak bisa ngobrol sama perempuan. Jadi, sekali lagi, maaf ya. Aku takut gitu, bukan bercanda, tapi beneran.
+          <br>
+          Dan sekali lagi, terima kasih ya, Kak, sudah mau menerima obrolan aku yang benar-benar kaku dan nggak jelas. Maaf ya kalau aku mungkin mengganggu atau gimana. 😁
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

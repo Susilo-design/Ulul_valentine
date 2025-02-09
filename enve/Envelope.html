@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lily+Script+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".container")
+          .mouseenter(function () {
+            $(".card").stop().animate({ top: "-90px" }, "slow");
+          })
+          .mouseleave(function () {
+            $(".card").stop().animate({ top: 0 }, "slow");
+          });
+
+        $("#flip-button").click(function () {
+          $(".card").toggle();
+          $(".card-back").toggle().toggleClass("show-message");
+          $("#fullscreen-button").toggle();
+        });
+
+        $("#fullscreen-button").click(function () {
+          window.location.href = "fullscreen.html";
+        });
+
+        
+        $("#fullscreen-button").hide();
+      });
+    </script>
+    <title>Gift Card</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="valentines">
+        <div class="envelope"></div>
+        <div class="front"></div>
+        <div class="card">
+          <div class="text">Happy<br/>Valentine's Day<br/>kak Ulfah</div>
+          <div class="heart"></div>
+          <div class="hearts">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+            <div class="four"></div>
+            <div class="five"></div>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="message">
+            <p>Happy Valentine's Day kak Ulfah</p>
+            <p>Ini adalah hadiah kecil dari aku untuk Kamu.</p>
+            <p>Sedikit ada Pesan dari aku Semoga Suka ya.</p>
+          </div>
+        </div>
+      </div>
+      <div class="shadow"></div>
+    </div>
+
+    <button id="flip-button">Flip Card</button>
+    <button id="fullscreen-button" style="display: none">
+      Pencet Inih
+    </button>
+    <audio autoplay>
+      <source src="/enve/Glue Song.mp3" type="audio/mp3"/>
+    </audio>
+  </body>
+</html>
