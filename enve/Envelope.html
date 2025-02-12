@@ -9,28 +9,35 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lily+Script+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-      $(document).ready(function () {
-        $(".container")
-          .mouseenter(function () {
-            $(".card").stop().animate({ top: "-90px" }, "slow");
-          })
-          .mouseleave(function () {
-            $(".card").stop().animate({ top: 0 }, "slow");
-          });
+ <script>
+  $(document).ready(function () {
+    let audio = $("audio")[0];
 
-        $("#flip-button").click(function () {
-          $(".card").toggle();
-          $(".card-back").toggle().toggleClass("show-message");
-          $("#fullscreen-button").toggle();
-        });
-
-        $("#fullscreen-button").click(function () {
-          window.location.href = "fullscreen.html";
-        });
-
-        
-        $("#fullscreen-button").hide();
+    $(".container")
+      .mouseenter(function () {
+        $(".card").stop().animate({ top: "-90px" }, "slow");
+        if (audio.paused) {
+          audio.play(); 
+        }
+      })
+      .mouseleave(function () {
+        $(".card").stop().animate({ top: 0 }, "slow");
       });
+
+    $("#flip-button").click(function () {
+      $(".card").toggle();
+      $(".card-back").toggle().toggleClass("show-message");
+      $("#fullscreen-button").toggle();
+    });
+
+    $("#fullscreen-button").click(function () {
+      window.location.href = "fullscreen.html";
+    });
+
+    $("#fullscreen-button").hide();
+  });
+</script>
+
     </script>
     <title>Gift Card</title>
   </head>
