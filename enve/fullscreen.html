@@ -67,9 +67,27 @@
   </head>
 
   <body>
-    <audio autoplay loop>
-      <source src="/enve/Glue Song.mp3" type="audio/mp3" />
-    </audio>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let audio = document.querySelector("audio");
+
+    // Coba langsung play
+    let playPromise = audio.play();
+
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          console.log("Audio berhasil diputar otomatis.");
+        })
+        .catch(() => {
+          console.log("Autoplay dicegah, menunggu interaksi...");
+          document.addEventListener("click", function () {
+            audio.play();
+          }, { once: true });
+        });
+    }
+  });
+</script>
     <div class="fullscreen-message">
       <div class="text fullscreen">
         <h4>Dibaca Ya kak</h4>
